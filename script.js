@@ -9,7 +9,7 @@ function calcularPrecio() {
 
   const costoPorKilo = 40;
   const margen = 1.35;
-  const dolarBlue = 1350; // Cambialo según cotización actual
+  const dolarBlue = 1350;
 
   const costoBase = precioUSD + (pesoKG * costoPorKilo);
   const precioFinalUSD = costoBase * margen;
