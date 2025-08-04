@@ -1,3 +1,7 @@
+.js
++5
+-2
+
 function calcularPrecio() {
   const precioUSD = parseFloat(document.getElementById('usdInput').value);
   const link = document.getElementById('linkInput').value;
@@ -16,11 +20,16 @@ function calcularPrecio() {
     { palabra: "auricular", peso: 0.4 },
     { palabra: "tablet", peso: 0.6 },
     { palabra: "cámara", peso: 0.9 },
+    { palabra: "camara", peso: 0.9 },
     { palabra: "reloj", peso: 0.25 },
     { palabra: "usb", peso: 0.1 }
   ];
 
   const linkLower = link.toLowerCase();
+  const linkLower = link
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '');
   let pesoKG = 1; // Default si no encuentra categoría
 
   for (let cat of categorias) {
@@ -46,6 +55,3 @@ function calcularPrecio() {
 
   document.getElementById('resultado').innerText =
     `Peso estimado: ${pesoKG} kg\nPrecio estimado: $${finalUSD} USD / $${finalARS} ARS`;
-
-  document.getElementById('whatsappLink').href = linkWhatsApp;
-}
