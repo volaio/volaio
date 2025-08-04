@@ -1,7 +1,3 @@
-.js
-+5
--2
-
 function calcularPrecio() {
   const precioUSD = parseFloat(document.getElementById('usdInput').value);
   const link = document.getElementById('linkInput').value;
@@ -11,6 +7,7 @@ function calcularPrecio() {
     return;
   }
 
+function calcularTotales(precioUSD, link) {
   const categorias = [
     { palabra: "iphone", peso: 0.5 },
     { palabra: "macbook", peso: 2 },
@@ -20,17 +17,13 @@ function calcularPrecio() {
     { palabra: "auricular", peso: 0.4 },
     { palabra: "tablet", peso: 0.6 },
     { palabra: "cámara", peso: 0.9 },
-    { palabra: "camara", peso: 0.9 },
     { palabra: "reloj", peso: 0.25 },
     { palabra: "usb", peso: 0.1 }
   ];
 
   const linkLower = link.toLowerCase();
-  const linkLower = link
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/\p{Diacritic}/gu, '');
   let pesoKG = 1; // Default si no encuentra categoría
+  let pesoKG = 1;
 
   for (let cat of categorias) {
     if (linkLower.includes(cat.palabra)) {
@@ -46,6 +39,23 @@ function calcularPrecio() {
   const costoBase = precioUSD + (pesoKG * costoPorKilo);
   const precioFinalUSD = costoBase * margen;
   const precioFinalARS = precioFinalUSD * dolarBlue;
+  const costoBase = precioUSD + pesoKG * costoPorKilo;
+  const precioFinalUSD = parseFloat((costoBase * margen).toFixed(2));
+  const precioFinalARS = parseFloat((precioFinalUSD * dolarBlue).toFixed(2));
+
+  return { pesoKG, precioFinalUSD, precioFinalARS };
+}
+
+function calcularPrecio() {
+  const precioUSD = parseFloat(document.getElementById('usdInput').value);
+  const link = document.getElementById('linkInput').value;
+
+  if (isNaN(precioUSD) || !link) {
+    document.getElementById('resultado').innerText = "Completá correctamente el precio y el link del producto.";
+    return;
+  }
+
+  const { pesoKG, precioFinalUSD, precioFinalARS } = calcularTotales(precioUSD, link);
 
   const finalUSD = precioFinalUSD.toFixed(2);
   const finalARS = precioFinalARS.toLocaleString();
@@ -55,3 +65,10 @@ function calcularPrecio() {
 
   document.getElementById('resultado').innerText =
     `Peso estimado: ${pesoKG} kg\nPrecio estimado: $${finalUSD} USD / $${finalARS} ARS`;
+
+  document.getElementById('whatsappLink').href = linkWhatsApp;
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { calcularTotales };
+}
