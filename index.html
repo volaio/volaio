@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volaio — Importaciones desde EE.UU.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Volaio</h1>
+      <p>Importaciones inteligentes desde EE.UU. a Argentina</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Traé lo que quieras de EE.UU. en 5 días</h2>
+      <p>Calculá automáticamente el precio final de tu importación en segundos. Sin complicaciones, sin sorpresas.</p>
+      <button onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">
+        Cotizar ahora
+      </button>
+    </div>
+  </section>
+
+  <section class="calculator" id="calculator">
+    <div class="container">
+      <h3>Calculadora Express</h3>
+      <input type="url" placeholder="Pegá el link del producto" id="linkInput" />
+      <input type="number" placeholder="Precio en USD" id="usdInput" />
+      <button onclick="calcularPrecio()">Calcular precio final</button>
+      <div id="resultado" class="resultado"></div>
+      <a id="whatsappLink" href="#" target="_blank">
+        <button class="whatsapp">Encargar por WhatsApp</button>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Volaio</strong> — Importaciones personales desde EE.UU.</p>
+      <p>WhatsApp: +54 9 11 2631 0568 | Instagram: @volaio</p>
+    </div>
+  </footer>
+</body>
+</html>
