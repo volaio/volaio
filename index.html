@@ -13,50 +13,37 @@
   <header>
     <div class="container">
       <h1>Volaio</h1>
-      <p>Importaciones personalizadas desde EE.UU. a Argentina</p>
+      <p>Importaciones desde EE.UU. a Argentina en tiempo récord</p>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h2>Importá lo que querés de EE.UU. en solo 5 días</h2>
-      <p>Con <strong>Volaio</strong>, cotizás al instante, ves el precio final en pesos y encargás directo por WhatsApp. Rápido, claro y sin sorpresas.</p>
-      <button onclick="document.getElementById('steps').scrollIntoView({ behavior: 'smooth' })">
-        ¿Cómo funciona?
-      </button>
+      <h2>Tu producto en Argentina en solo 5 días</h2>
+      <p>Somos tu puente directo con Estados Unidos. Cotizá, calculá el precio final y encargá de forma rápida y segura.</p>
+      <button onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">Cotizar ahora</button>
     </div>
   </section>
 
-  <section class="steps" id="steps">
+  <section class="services">
     <div class="container">
-      <h3 class="section-title">¿Cómo funciona?</h3>
-      <div class="steps-grid">
-        <div class="step">
-          <h4>1. Pegá el link del producto</h4>
-          <p>Elegí cualquier artículo de una tienda online de EE.UU.</p>
-        </div>
-        <div class="step">
-          <h4>2. Ingresá los datos</h4>
-          <p>Cargá el precio del producto y el peso estimado en kilos.</p>
-        </div>
-        <div class="step">
-          <h4>3. Calculá al instante</h4>
-          <p>Obtené el precio final en USD y ARS con un clic.</p>
-        </div>
-        <div class="step">
-          <h4>4. Encargá por WhatsApp</h4>
-          <p>Confirmá tu pedido directamente con nuestro equipo.</p>
-        </div>
+      <h3>¿Qué podés importar con Volaio?</h3>
+      <div class="services-grid">
+        <div class="service">📱 Apple y Tecnología</div>
+        <div class="service">👟 Zapatillas y Ropa</div>
+        <div class="service">💄 Perfumes y Cosmética</div>
+        <div class="service">🎧 Electrónica y Accesorios</div>
+        <div class="service">📦 Otros productos personales</div>
       </div>
     </div>
   </section>
 
   <section class="calculator" id="calculator">
     <div class="container">
-      <h3>Calculadora de importación</h3>
+      <h3>Calculadora express</h3>
       <input type="url" placeholder="Link del producto" id="linkInput">
-      <input type="number" placeholder="Precio del producto en USD" id="usdInput">
-      <input type="number" placeholder="Peso estimado en kilos (ej: 0.5)" id="pesoInput">
+      <input type="number" placeholder="Precio en USD" id="usdInput">
+      <input type="number" placeholder="Peso en kilos (ej: 0.5)" id="pesoInput">
       <button onclick="calcularPrecio()">Calcular precio</button>
       <div id="resultado" class="resultado"></div>
       <a id="whatsappLink" href="#" target="_blank">
@@ -65,11 +52,9 @@
     </div>
   </section>
 
-  <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
-
   <footer>
     <div class="container">
-      <p><strong>Volaio</strong> — Importaciones personales, sin complicaciones.</p>
+      <p><strong>Volaio</strong> — Envíos personales desde EE.UU. sin complicaciones.</p>
       <p>WhatsApp: +54 9 11 2631 0568 &nbsp; | &nbsp; Instagram: @volaio</p>
     </div>
   </footer>
