@@ -1,0 +1,16 @@
+{
+  "name": "volaio",
+  "version": "1.0.0",
+  "description": "**Volaio** es una plataforma moderna y minimalista que permite cotizar productos importados desde Estados Unidos hacia Argentina en tan solo minutos. Está pensada para ofrecer una experiencia clara, profesional y sin fricciones, tanto para usuarios finales como para revendedores.",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
