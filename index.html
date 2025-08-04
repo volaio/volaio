@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Volaio — Importaciones desde EE.UU.</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -40,13 +43,24 @@
   <section class="calculator" id="calculator">
     <div class="container">
       <h3>Calculadora de importación</h3>
-      <input type="url" placeholder="Link del producto">
+      <input type="url" placeholder="Link del producto" id="linkInput">
       <input type="number" placeholder="Precio del producto en USD" id="usdInput">
       <input type="number" placeholder="Peso estimado en kilos (ej: 0.5)" id="pesoInput">
       <button onclick="calcularPrecio()">Calcular precio</button>
       <div id="resultado" class="resultado"></div>
-      <a href="https://wa.me/5491126310568?text=Hola%2C%20quiero%20hacer%20una%20importaci%C3%B3n%20con%20Volaio" target="_blank">
+      <a id="whatsappLink" href="#" target="_blank">
         <button class="whatsapp">Encargar por WhatsApp</button>
       </a>
     </div>
-  </secti
+  </section>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Volver arriba">↑</button>
+
+  <footer>
+    <div class="container">
+      <p><strong>Volaio</strong> — Importaciones personales, sin complicaciones.</p>
+      <p>WhatsApp: +54 9 11 2631 0568 &nbsp; | &nbsp; Instagram: @volaio</p>
+    </div>
+  </footer>
+</body>
+</html>
