@@ -1,33 +1,53 @@
-# Volaio
+# Volaio — Importaciones desde EE.UU. a Argentina
 
-**Volaio** es una plataforma de importaciones personalizadas desde EE.UU. a Argentina. Con un diseño limpio, simple y eficiente, permite a los usuarios:
-
-- Cotizar automáticamente cualquier producto importado
-- Ver el precio estimado en USD y pesos argentinos
-- Encargar de forma directa por WhatsApp
-
-### 🌐 Sitio online
-
-[🔗 Ir al sitio web](https://volaio.github.io/volaio)
+**Volaio** es una plataforma moderna y minimalista que permite cotizar productos importados desde Estados Unidos hacia Argentina en tan solo minutos. Está pensada para ofrecer una experiencia clara, profesional y sin fricciones, tanto para usuarios finales como para revendedores.
 
 ---
 
-### 🚀 ¿Cómo funciona?
+### ⚙️ ¿Qué ofrece Volaio?
 
-1. Pegás el link del producto que querés importar
-2. Elegís la categoría
-3. Ingresás el precio en USD
-4. Calculás el precio final
-5. Encargás directamente por WhatsApp
+- ✅ Cotización automática con precio final en USD y ARS
+- ✅ Estimación basada en peso real + margen comercial
+- ✅ Botón de pedido directo vía WhatsApp
+- ✅ Diseño visual limpio, responsivo y profesional (inspirado en Apple)
+- ✅ Interfaz sin distracciones, centrada en la experiencia del usuario
+
+---
+
+### 🧮 ¿Cómo funciona?
+
+1. Pegás el link del producto que querés importar  
+2. Ingresás el precio en USD y el peso estimado en kilos  
+3. Calculás automáticamente el precio final con envío y margen  
+4. Encargás directamente por WhatsApp
+
+---
+
+### 💻 Tecnologías usadas
+
+- HTML5 + CSS3
+- JavaScript Vanilla (sin frameworks)
+- Responsive Design con CSS Grid + Flexbox
+- Deploy gratuito en GitHub Pages
+
+---
+
+### 🌐 Sitio en producción
+
+[🔗 Ver sitio online](https://volaio.github.io/volaio)
 
 ---
 
 ### 📱 Contacto
 
-- WhatsApp: +54 9 11 2631 0568  
-- Instagram: [@volaio](https://instagram.com/volaio)
+- WhatsApp: [+54 9 11 2631 0568](https://wa.me/5491126310568)  
+- Instagram: [@volaio](https://instagram.com/volaio)  
 
 ---
 
+### ✨ Marca
+
 > *Volaio — Lo que querés, volando desde EE.UU.*
+
+---
 
