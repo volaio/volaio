@@ -19,6 +19,8 @@
 1. Pegás el link del producto que querés importar  
 2. Ingresás el precio en USD y el peso estimado en kilos  
 3. Calculás automáticamente el precio final con envío y margen  
+2. Ingresás el precio en USD y estimamos automáticamente el peso a partir del link
+3. Calculás automáticamente el precio final con envío y margen
 4. Encargás directamente por WhatsApp
 
 ---
@@ -44,10 +46,3 @@
 - Instagram: [@volaio](https://instagram.com/volaio)  
 
 ---
-
-### ✨ Marca
-
-> *Volaio — Lo que querés, volando desde EE.UU.*
-
----
-
