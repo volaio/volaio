@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volaio — Cotización automática de importaciones desde EE.UU. a Argentina." />
+  <title>Volaio | Importaciones Tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Volaio Logo" class="logo" />
+      <h1>Importá lo que quieras desde EE.UU. en 5 días</h1>
+      <p class="subheadline">Cotizá automáticamente y encargá directo por WhatsApp</p>
+      <button onclick="scrollToElement('calculator')">Empezar mi cotización</button>
+    </div>
+  </header>
+
+  <section class="steps" id="como-funciona">
+    <div class="container">
+      <h2>¿Cómo funciona?</h2>
+      <ol>
+        <li>Elegís la categoría del producto</li>
+        <li>Ingresás el precio en USD</li>
+        <li>Calculamos el peso estimado y el costo</li>
+        <li>Te mostramos el resultado</li>
+        <li>Encargás directo por WhatsApp</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="calculator" id="calculator">
+    <div class="container">
+      <h3>Calculadora de Importación</h3>
+      <label for="categorySelect">Categoría:</label>
+      <select id="categorySelect">
+        <option value="">Seleccionar</option>
+        <option value="reloj">⌚ Reloj</option>
+        <option value="zapatilla">👟 Zapatilla</option>
+        <option value="remera">👕 Remera</option>
+        <option value="pantalon">👖 Pantalón</option>
+        <option value="computadora">💻 Computadora</option>
+        <option value="auricular">🎧 Auricular</option>
+        <option value="consola">🎮 Consola</option>
+        <option value="otro">📦 Otro</option>
+        <option value="celular">📱 Celular</option>
+      </select>
+
+      <label for="usdInput">Precio del producto en USD:</label>
+      <input type="number" id="usdInput" placeholder="Ej: 250" />
+
+      <button onclick="calcularPrecio()">Calcular precio</button>
+
+      <div class="resultado" id="resultado"></div>
+      <a href="#" target="_blank" id="whatsappLink" class="whatsapp">Encargar por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>📞 WhatsApp: <a href="https://wa.me/5491126310568" target="_blank">+54 9 11 2631 0568</a></p>
+      <p>📷 Instagram: <a href="https://instagram.com/volaio.volaio" target="_blank">@volaio.volaio</a></p>
+      <p class="footer-note">Volaio — Importaciones personales, sin complicaciones.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
