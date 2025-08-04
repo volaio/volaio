@@ -1,7 +1,7 @@
 :root {
   --primary-color: #0056ff;
   --dark: #1a1a1a;
-  --light-gray: #f1f1f1;
+  --light-gray: #f5f5f5;
   --text-color: #111;
   --radius: 10px;
   --font: 'Inter', sans-serif;
@@ -14,7 +14,7 @@
 body {
   font-family: var(--font);
   margin: 0;
-  background-color: #ffffff;
+  background-color: #fff;
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -36,7 +36,6 @@ header, footer {
   background-color: var(--light-gray);
   text-align: center;
   padding: 4rem 1rem;
-  animation: fadeIn 0.8s ease;
 }
 
 .hero h2 {
@@ -48,8 +47,7 @@ header, footer {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem auto;
 }
 
 .hero button {
@@ -60,7 +58,7 @@ header, footer {
   font-size: 1rem;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .hero button:hover {
@@ -69,16 +67,16 @@ header, footer {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
 
 .service {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
+  background-color: #fff;
+  padding: 1.2rem;
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
@@ -103,7 +101,7 @@ header, footer {
   font-size: 1rem;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .calculator button:hover {
@@ -114,6 +112,7 @@ header, footer {
   font-weight: bold;
   margin-top: 1rem;
   font-size: 1.1rem;
+  white-space: pre-line;
 }
 
 .whatsapp {
@@ -124,9 +123,4 @@ header, footer {
 footer p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
