@@ -28,6 +28,7 @@ function calcularPrecio() {
   document.getElementById('whatsappLink').href = linkWhatsApp;
 }
 
+// Botón scroll arriba
 window.onscroll = function () {
   const btn = document.getElementById("scrollTopBtn");
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
