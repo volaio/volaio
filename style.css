@@ -1,0 +1,112 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+header {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  max-width: 140px;
+  margin-bottom: 0.5rem;
+}
+
+.hero {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero button {
+  margin-top: 1.5rem;
+  background-color: white;
+  color: #2a5298;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.calculator select,
+.calculator input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.calculator button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.whatsapp {
+  margin-top: 1.5rem;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+}
+
+.resultado {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 2rem 1rem;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
