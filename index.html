@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Volaio — Importaciones desde EE.UU.</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script defer src="script.js"></script>
 </head>
@@ -13,15 +13,17 @@
   <header>
     <div class="container">
       <h1>Volaio</h1>
-      <p>Importaciones desde EE.UU. a Argentina en tiempo récord</p>
+      <p>Importaciones inteligentes desde EE.UU. a Argentina</p>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h2>Tu producto en Argentina en solo 5 días</h2>
-      <p>Somos tu puente directo con Estados Unidos. Cotizá, calculá el precio final y encargá de forma rápida y segura.</p>
-      <button onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">Cotizar ahora</button>
+      <h2>Traé lo que quieras de EE.UU. en 5 días</h2>
+      <p>Calculá automáticamente el precio final de tu importación en segundos. Sin complicaciones, sin sorpresas.</p>
+      <button onclick="document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' })">
+        Cotizar ahora
+      </button>
     </div>
   </section>
 
@@ -30,9 +32,9 @@
       <h3>¿Qué podés importar con Volaio?</h3>
       <div class="services-grid">
         <div class="service">📱 Apple y Tecnología</div>
-        <div class="service">👟 Zapatillas y Ropa</div>
-        <div class="service">💄 Perfumes y Cosmética</div>
-        <div class="service">🎧 Electrónica y Accesorios</div>
+        <div class="service">👟 Zapatillas y Moda</div>
+        <div class="service">💄 Perfumes y Belleza</div>
+        <div class="service">🎧 Accesorios y Electrónica</div>
         <div class="service">📦 Otros productos personales</div>
       </div>
     </div>
@@ -40,11 +42,10 @@
 
   <section class="calculator" id="calculator">
     <div class="container">
-      <h3>Calculadora express</h3>
-      <input type="url" placeholder="Link del producto" id="linkInput">
+      <h3>Calculadora Express</h3>
+      <input type="url" placeholder="Pegá el link del producto" id="linkInput">
       <input type="number" placeholder="Precio en USD" id="usdInput">
-      <input type="number" placeholder="Peso en kilos (ej: 0.5)" id="pesoInput">
-      <button onclick="calcularPrecio()">Calcular precio</button>
+      <button onclick="calcularPrecio()">Calcular precio final</button>
       <div id="resultado" class="resultado"></div>
       <a id="whatsappLink" href="#" target="_blank">
         <button class="whatsapp">Encargar por WhatsApp</button>
@@ -54,8 +55,8 @@
 
   <footer>
     <div class="container">
-      <p><strong>Volaio</strong> — Envíos personales desde EE.UU. sin complicaciones.</p>
-      <p>WhatsApp: +54 9 11 2631 0568 &nbsp; | &nbsp; Instagram: @volaio</p>
+      <p><strong>Volaio</strong> — Importaciones personales desde EE.UU.</p>
+      <p>WhatsApp: +54 9 11 2631 0568 | Instagram: @volaio</p>
     </div>
   </footer>
 </body>
