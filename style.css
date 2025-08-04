@@ -1,0 +1,270 @@
+/*--------------------------------------------------------------
+>>> GENERAL RESET & GLOBAL STYLES
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/*--------------------------------------------------------------
+>>> VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --primary-navy: #1A1F71;
+  --primary-steel: #4B4B4B;
+  --primary-black: #1C1C1C;
+  --accent-electric: #007BFF;
+  --light-gray: #F5F5F5;
+  --white: #FFFFFF;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+>>> CONTAINERS & UTILITIES
+--------------------------------------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+>>> TYPOGRAPHY
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-navy);
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--primary-steel);
+  margin-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+>>> HEADER
+--------------------------------------------------------------*/
+header {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img.logo {
+  max-height: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar li a {
+  font-weight: 500;
+  color: var(--primary-black);
+  transition: var(--transition);
+}
+
+.navbar li a:hover {
+  color: var(--accent-electric);
+}
+
+/*--------------------------------------------------------------
+>>> HERO SECTION
+--------------------------------------------------------------*/
+.hero {
+  background-color: var(--light-gray);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* CTA Button */
+.btn {
+  background-color: var(--accent-electric);
+  color: var(--white);
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/*--------------------------------------------------------------
+>>> FEATURES SECTION (STEPS)
+--------------------------------------------------------------*/
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.feature {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--accent-electric);
+}
+
+/*--------------------------------------------------------------
+>>> CALCULATOR FORM
+--------------------------------------------------------------*/
+.calculator {
+  background-color: var(--light-gray);
+  padding: 60px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calculator input,
+.calculator select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  border: 1px solid #DDD;
+  font-size: 16px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.calculator input:focus,
+.calculator select:focus {
+  border-color: var(--accent-electric);
+}
+
+/*--------------------------------------------------------------
+>>> FIXED WHATSAPP BUTTON
+--------------------------------------------------------------*/
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
+>>> FOOTER
+--------------------------------------------------------------*/
+footer {
+  background-color: var(--primary-black);
+  color: var(--white);
+  padding: 40px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--accent-electric);
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: #66b3ff;
+}
+
+/*--------------------------------------------------------------
+>>> RESPONSIVE DESIGN
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
