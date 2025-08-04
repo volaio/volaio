@@ -1,11 +1,33 @@
 function calcularPrecio() {
   const precioUSD = parseFloat(document.getElementById('usdInput').value);
-  const pesoKG = parseFloat(document.getElementById('pesoInput').value);
   const link = document.getElementById('linkInput').value;
 
-  if (isNaN(precioUSD) || isNaN(pesoKG)) {
-    document.getElementById('resultado').innerText = "Completá correctamente el precio y el peso.";
+  if (isNaN(precioUSD) || !link) {
+    document.getElementById('resultado').innerText = "Completá correctamente el precio y el link del producto.";
     return;
+  }
+
+  const categorias = [
+    { palabra: "iphone", peso: 0.5 },
+    { palabra: "macbook", peso: 2 },
+    { palabra: "notebook", peso: 2 },
+    { palabra: "zapatilla", peso: 1 },
+    { palabra: "perfume", peso: 0.3 },
+    { palabra: "auricular", peso: 0.4 },
+    { palabra: "tablet", peso: 0.6 },
+    { palabra: "cámara", peso: 0.9 },
+    { palabra: "reloj", peso: 0.25 },
+    { palabra: "usb", peso: 0.1 }
+  ];
+
+  const linkLower = link.toLowerCase();
+  let pesoKG = 1; // Default si no encuentra categoría
+
+  for (let cat of categorias) {
+    if (linkLower.includes(cat.palabra)) {
+      pesoKG = cat.peso;
+      break;
+    }
   }
 
   const costoPorKilo = 40;
@@ -19,11 +41,11 @@ function calcularPrecio() {
   const finalUSD = precioFinalUSD.toFixed(2);
   const finalARS = precioFinalARS.toLocaleString();
 
-  const mensaje = `Hola, quiero hacer una importación con Volaio. El producto cuesta $${precioUSD} USD, pesa ${pesoKG} kg y el precio final estimado es $${finalUSD} USD / $${finalARS} ARS. Link: ${link}`;
+  const mensaje = `Hola, quiero hacer una importación con Volaio. El producto cuesta $${precioUSD} USD, se estimó un peso de ${pesoKG} kg y el precio final estimado es $${finalUSD} USD / $${finalARS} ARS. Link: ${link}`;
   const linkWhatsApp = `https://wa.me/5491126310568?text=${encodeURIComponent(mensaje)}`;
 
   document.getElementById('resultado').innerText =
-    `Precio estimado: $${finalUSD} USD / $${finalARS} ARS`;
+    `Peso estimado: ${pesoKG} kg\nPrecio estimado: $${finalUSD} USD / $${finalARS} ARS`;
 
   document.getElementById('whatsappLink').href = linkWhatsApp;
 }
