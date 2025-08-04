@@ -16,14 +16,14 @@ function calcularPrecio() {
   const dolarBlue = 1200; // Valor manual del dólar blue
 
   const categorias = {
-    reloj: { minKg: 0.5, maxKg: 1.0, usdKg: 60 },
-    zapatilla: { minKg: 0.8, maxKg: 1.0, usdKg: 60 },
-    remera: { minKg: 0.3, maxKg: 1.0, usdKg: 60 },
-    pantalon: { minKg: 0.5, maxKg: 2.0, usdKg: 60 },
-    computadora: { minKg: 2.0, maxKg: 2.0, usdKg: 70 },
-    auricular: { minKg: 0.1, maxKg: 0.5, usdKg: 60 },
-    consola: { minKg: 3.5, maxKg: 3.5, usdKg: 60 },
-    otro: { minKg: 1.0, maxKg: 10.0, usdKg: 60 },
+    reloj: { minKg: 0.5, maxKg: 1.0, usdKg: 90 },
+    zapatilla: { minKg: 0.8, maxKg: 1.0, usdKg: 90 },
+    remera: { minKg: 0.3, maxKg: 1.0, usdKg: 90 },
+    pantalon: { minKg: 0.5, maxKg: 2.0, usdKg: 90 },
+    computadora: { minKg: 2.0, maxKg: 2.0, usdKg: 90 },
+    auricular: { minKg: 0.1, maxKg: 0.5, usdKg: 90 },
+    consola: { minKg: 3.5, maxKg: 3.5, usdKg: 90 },
+    otro: { minKg: 1.0, maxKg: 10.0, usdKg: 90 },
     celular: { minKg: 0.5, maxKg: 0.5, usdKg: 130 }
   };
 
